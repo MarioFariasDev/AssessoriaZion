@@ -36,10 +36,17 @@ body {
 }
 
 .logo {
-  height: 60px;
-  display: block;
-  margin-bottom: 1rem;
+  height: 160px;
+  width: auto;
 }
+
+#quem-somos img {
+  width: 160px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 
 /* SEÇÕES */
 section {
@@ -119,43 +126,187 @@ button.btn-avaliar:hover {
 }
 
 /* PACOTES */
-.cards-pacotes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+/* Pacotes - Estilo futurista */
+.pacotes {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.card-pacote {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
-  transition: 0.3s;
+.pacotes h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #1d1d1d;
 }
 
-.card-pacote:hover {
+.pacote-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pacote-card {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.pacote-card:hover {
   transform: translateY(-5px);
 }
 
+.pacote-card h3 {
+  color: #1d1d1d;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+
+.pacote-card p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.pacote-card strong {
+  display: block;
+  font-size: 1.4em;
+  margin-bottom: 25px;
+  color: #0072ce;
+}
+
+.botao-whats {
+  display: inline-block;
+  background-color: #0072ce;
+  color: white;
+  padding: 14px 24px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.botao-whats:hover {
+  background-color: #005fa3;
+}
+
+/* Destaque plano intermediário - mais brilho */
 .card-pacote.destaque {
-  border: 2px solid var(--cor-degrade-clara);
+  background: linear-gradient(135deg, #00ff99, #00cc88);
+  color: #002f1a;
+  border: none;
+  box-shadow: 0 0 40px #00ff99;
 }
 
-.card-pacote h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: var(--cor-degrade-clara);
+.card-pacote.destaque ul li {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #002f1a;
 }
 
-.card-pacote ul {
-  list-style: none;
-  padding-left: 0;
+.card-pacote.destaque h3 {
+  color: #002f1a;
+  text-shadow: none;
 }
 
-.card-pacote li {
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+/* Botões dos pacotes - futuristas */
+.botoes-pacotes {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
+
+.btn-pacote {
+  background: linear-gradient(90deg, #3B5E6F, #17697E);
+  border: none;
+  color: #e0f7fa;
+  padding: 16px 36px;
+  border-radius: 36px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 12px #40c4ff88;
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.btn-pacote:hover {
+  background: #40c4ff;
+  box-shadow: 0 0 20px #40c4ff;
+  color: #003366;
+  transform: scale(1.1);
+}
+
+.btn-pacote.secundario {
+  background: transparent;
+  border: 2px solid #40c4ff;
+  color: #40c4ff;
+}
+
+.btn-pacote.secundario:hover {
+  background: #40c4ff;
+  color: #003366;
+  box-shadow: 0 0 20px #40c4ff;
+}
+
+/* Serviços Avulsos */
+.servicos {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servicos h2 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.lista-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.servico-item {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.servico-item:hover {
+  transform: scale(1.03);
+}
+
+.btn-servico {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #003366; /* Azul escuro do site */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-servico:hover {
+  background-color: #002244;
+}
+
+
 
 /* FORMULÁRIO */
 form.form-avaliacao {
@@ -185,22 +336,45 @@ form.form-avaliacao {
 /* CONTATO */
 .contato-itens {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: center;  /* centraliza horizontalmente */
+  gap: 30px;                /* espaço entre os itens */
+  flex-wrap: wrap;          /* quebra linha se necessário em telas pequenas */
+  margin-top: 15px;
 }
 
-.contato-item a {
-  color: var(--cor-degrade-clara);
-  text-decoration: none;
+.contato-itens > div {
+  white-space: nowrap;      /* evita quebra dentro do contato */
   font-weight: 500;
+  color: #000;
 }
+
+.contato-itens a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 4px;
+  font-weight: 600;
+}
+
+.contato-itens a:hover {
+  text-decoration: underline;
+}
+
 
 /* FOOTER */
-.footer {
-  background: var(--cor-degrade-escura);
-  color: white;
-  padding: 2rem 1rem;
+footer {
+  background-color: #0d1a3d; /* substitua pelo tom exato do seu azul escuro, se for outro */
+  color: #fff;
   text-align: center;
+  padding: 40px 20px;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 5px 0;
 }
 
 .footer-links {
@@ -263,4 +437,71 @@ form.form-avaliacao {
   .footer-links {
     flex-direction: column;
   }
+}
+#btnTopo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #17697E;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #3B5E6F;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+#btnTopo:hover {
+  background-color: #3B5E6F;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, label, input, textarea, button {
+  text-align: center;
+}
+
+/* Estilo base dos links do menu */
+.site-header nav a {
+  color: white !important;
+  text-decoration: none !important;
+  border: 2px solid white !important;
+  padding: 6px 12px !important;
+  margin: 0 8px;
+  border-radius: 6px;
+  font-weight: 500;
+  background: transparent;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.site-header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+.contato {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center; /* centraliza todo texto dentro da seção */
+}
+
+.contato h2 {
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.6;
+  display: inline-block; /* faz o h2 ajustar ao tamanho do conteúdo */
+  text-align: center; /* centraliza o texto interno, redundante aqui */
+  margin: 0 auto; /* centraliza o bloco h2 dentro da seção */
+}
+
+.contato a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contato a:hover {
+  text-decoration: underline;
 }
