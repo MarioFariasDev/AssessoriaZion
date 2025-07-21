@@ -26,19 +26,19 @@
 <body>
 
   <!-- Header com Logo e Menu -->
-  <header class="site-header">
-    <div class="container">
-      <a href="#inicio"><img src="imagens/logo-zion.png" alt="Zion Mídia" class="logo"></a>
-      <nav>
-        <a href="#inicio">Início</a>
-        <a href="#quem-somos">Quem Somos</a>
-        <a href="#pacotes">Pacotes</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#avaliacao">Avaliação</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </header>
+    <header class="site-header">
+      <div class="container">
+        <a href="#inicio"><img src="assets/img/logozion.png" alt="Zion Mídia" class="logo"></a>
+        <nav>
+          <a href="#inicio">Início</a>
+          <a href="#quem-somos">Quem Somos</a>
+          <a href="#pacotes">Pacotes</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#avaliacao">Avaliação</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
 
   <!-- Início -->
   <section id="inicio" class="hero">
@@ -48,7 +48,7 @@
 
   <!-- Quem Somos -->
   <section id="quem-somos" class="sobre">
-    <img src="assets/img/equipe.jpg" alt="Equipe Zion Mídia" />
+    <img src="assets/img/logozionmidia.jpeg" alt="Equipe Zion Mídia" />
     <div class="sobre-texto">
       <h2>Quem Somos</h2>
       <p>A <strong>Zion Media</strong> é uma assessoria de marketing digital com foco em empresas que querem crescer de forma estratégica nas redes sociais.</p>
@@ -64,33 +64,45 @@
 
   <!-- Pacotes -->
   <section id="pacotes" class="pacotes">
-    <div class="plano">
-      <h3>Plano Impulso</h3>
-      <p>✔ Gestão de 1 rede social<br>✔ 6 postagens/mês<br>✔ Stories úteis diários<br>✔ 1 Reels<br>✔ Google Maps</p>
-      <button>Quero esse</button>
-    </div>
-    <div class="plano">
-      <h3>Plano Presença Digital</h3>
-      <p>✔ 10 postagens/mês<br>✔ Tráfego pago<br>✔ Calendário<br>✔ 2 Reels<br>✔ Suporte WhatsApp</p>
-      <button>Quero esse</button>
-    </div>
-    <div class="plano">
-      <h3>Plano Domínio Digital</h3>
-      <p>✔ 12 postagens<br>✔ Stories animados<br>✔ 4 Reels<br>✔ Google Maps<br>✔ Consultoria completa</p>
-      <button>Quero esse</button>
+    <h2>Escolha o Plano Ideal para Você</h2>
+    <div class="pacote-container">
+      <div class="pacote-card">
+        <h3>Plano Essencial</h3>
+        <p>Ideal para quem está começando. Inclui 2 posts por semana e 1 arte institucional.</p>
+        <strong>R$ 299/mês</strong>
+        <a href="https://wa.me/5592985820032?text=Olá! Tenho interesse no Plano Essencial." class="botao-whats">Quero esse</a>
+      </div>
+
+      <div class="pacote-card">
+        <h3>Plano Profissional</h3>
+        <p>Para quem quer presença digital. 3 posts por semana, stories e artes promocionais.</p>
+        <strong>R$ 499/mês</strong>
+        <a href="https://wa.me/5592985820032?text=Olá! Tenho interesse no Plano Profissional." class="botao-whats">Quero esse</a>
+      </div>
+
+      <div class="pacote-card">
+        <h3>Plano Premium</h3>
+        <p>Gestão completa com estratégia. 5 posts por semana, vídeos e relatórios mensais.</p>
+        <strong>R$ 799/mês</strong>
+        <a href="https://wa.me/5592985820032?text=Olá! Tenho interesse no Plano Premium." class="botao-whats">Quero esse</a>
+      </div>
     </div>
   </section>
 
   <!-- Serviços Avulsos -->
   <section id="servicos" class="servicos">
+    <h2>Serviços Avulsos</h2>
     <div class="lista-servicos">
       <div class="servico-item">🎨 Artes únicas</div>
       <div class="servico-item">🎥 Vídeos personalizados</div>
       <div class="servico-item">🖌 Identidade visual</div>
       <div class="servico-item">📲 Capas e materiais</div>
     </div>
-    <a href="https://wa.me/5592985820032" class="btn-servico" target="_blank">Solicitar Orçamento Avulso</a>
+    <a href="https://wa.me/5592985820032?text=Olá%20Jackson,%20tenho%20interesse%20em%20um%20serviço%20avulso%20e%20gostaria%20de%20solicitar%20um%20orçamento!" class="btn-servico" target="_blank">
+      Solicitar Orçamento Avulso
+    </a>
   </section>
+
 
   <!-- Avaliação Gratuita -->
   <section id="avaliacao" class="avaliacao">
@@ -133,6 +145,10 @@
   <button id="btnTopo" title="Voltar ao topo">↑</button>
 
   <!-- Scripts -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("Ej9ynU6yPirYA8duf");
+  </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
 
