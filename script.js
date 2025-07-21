@@ -1,56 +1,57 @@
-// script.js
-
-// Inicializa animações AOS (Animate On Scroll)
+// ======= INICIALIZAÇÃO AOS (Animações de scroll) =======
 AOS.init({
-    duration: 800,
+    duration: 1000,
     once: true,
 });
 
-// Botão de voltar ao topo
-const btnTopo = document.createElement('button');
-btnTopo.innerText = '⬆';
-btnTopo.id = 'voltar-topo';
-btnTopo.style.position = 'fixed';
-btnTopo.style.bottom = '30px';
-btnTopo.style.right = '30px';
-btnTopo.style.padding = '10px 15px';
-btnTopo.style.borderRadius = '50%';
-btnTopo.style.border = 'none';
-btnTopo.style.background = '#17697E';
-btnTopo.style.color = 'white';
-btnTopo.style.cursor = 'pointer';
-btnTopo.style.display = 'none';
-btnTopo.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
-document.body.appendChild(btnTopo);
+// ======= BOTÃO VOLTAR AO TOPO =======
+const btnTopo = document.getElementById("btnTopo");
 
-btnTopo.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        btnTopo.style.display = "block";
+    } else {
+        btnTopo.style.display = "none";
+    }
 });
 
-window.addEventListener('scroll', () => {
-    btnTopo.style.display = window.scrollY > 200 ? 'block' : 'none';
+btnTopo.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Validação básica de formulário (exemplo: Avalie Meu Perfil)
-const form = document.querySelector('form');
-if (form) {
-    form.addEventListener('submit', (e) => {
-        const nome = form.querySelector('[name="nome"]');
-        const email = form.querySelector('[name="email"]');
-        if (!nome.value.trim() || !email.value.trim()) {
-            e.preventDefault();
-            alert('Por favor, preencha todos os campos obrigatórios.');
-        }
-    });
-}
+// ======= ENVIO DO FORMULÁRIO COM EMAILJS =======
+const form = document.getElementById("form-contato");
 
-// Futuras microinterações (hover em botões, cards etc)
-document.querySelectorAll('button, a.card').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        el.style.transform = 'scale(1.05)';
-        el.style.transition = 'transform 0.3s';
-    });
-    el.addEventListener('mouseleave', () => {
-        el.style.transform = 'scale(1)';
-    });
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    // Validação básica (pode ser expandida)
+    if (!nome || !email || !mensagem) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    // Envio via EmailJS
+    let emailjs;
+    emailjs.send("service_c92h247", "_ejs-test-email-service_", {
+        from_name: nome,
+        from_email: email,
+        message: mensagem
+    }, "Ej9ynU6yPirYA8duf")
+        .then(() => {
+            alert("Mensagem enviada com sucesso! 🚀");
+            form.reset();
+        })
+        .catch((error) => {
+            console.error("Erro ao enviar:", error);
+            alert("Houve um erro ao enviar a mensagem. Tente novamente mais tarde.");
+        });
 });
+
+// ======= RESERVADO: FUTURAS MICROINTERAÇÕES =======
+// Exemplo: feedback visual nos botões, notificações dinâmicas, etc.
+// Você pode adicionar classes CSS aqui e ativar elementos conforme necessário.
