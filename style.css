@@ -1,231 +1,266 @@
-/* Importa fonte futurista e clean */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+/* Importa a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* RESET */
+:root {
+  --cor-degrade-escura: #3B5E6F;
+  --cor-degrade-clara: #17697E;
+  --cor-branca: #fff;
+  --cor-cinza-claro: #f0f4f8;
+  --cor-texto: #1f1f1f;
+  --cor-acento: #00c2cb;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(120deg, #3B5E6F, #17697E);
-  color: #fff;
-  scroll-behavior: smooth;
-}
-
-/* LOGO */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 5%;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(6px);
-}
-
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-.logo img {
-  height: 50px;
-}
-
-/* NAVIGATION */
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-nav a:hover {
-  color: #FFD700;
-}
-
-/* HERO SECTION */
-.hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5%;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.hero button {
-  padding: 12px 30px;
-  font-size: 1rem;
-  background: #fff;
-  color: #17697E;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.hero button:hover {
-  background: #FFD700;
-  color: #000;
-}
-
-/* PACOTES */
-.pacotes {
-  padding: 60px 5%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.plano {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 30px;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.plano:hover {
-  transform: translateY(-5px);
-}
-
-.plano h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.plano p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.plano button {
-  background: #FFD700;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 30px;
-  cursor: pointer;
-  color: #000;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  padding: 40px 5%;
-  background: #00000055;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: underline;
-}
-
-footer .social-icons {
-  margin-top: 20px;
-}
-
-footer .social-icons a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-
-footer .social-icons a:hover {
-  color: #FFD700;
-}
-
-/* QUEM SOMOS (estilo tipo oceanbrasil.com/equipe) */
-.sobre {
-  padding: 60px 5%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  align-items: center;
-}
-
-.sobre img {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-}
-
-.sobre-texto {
-  max-width: 600px;
-}
-
-.sobre-texto h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.sobre-texto p {
-  font-size: 1.1rem;
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-cinza-claro);
   line-height: 1.6;
 }
 
-/* VOLTAR AO TOPO */
-#voltar-topo {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* HEADER */
+.site-header {
+  background: linear-gradient(to right, var(--cor-degrade-escura), var(--cor-degrade-clara));
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 60px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* SEÇÕES */
+section {
+  padding: 4rem 0;
+  background-color: var(--cor-branca);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--cor-degrade-clara);
+}
+
+.descricao {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* BOTÕES */
+a.btn-whatsapp,
+a.btn-pacote,
+a.btn-servico,
+button.btn-avaliar {
+  display: inline-block;
+  background: linear-gradient(to right, var(--cor-degrade-escura), var(--cor-degrade-clara));
+  color: var(--cor-branca);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+a.btn-whatsapp:hover,
+a.btn-pacote:hover,
+a.btn-servico:hover,
+button.btn-avaliar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(23, 105, 126, 0.3);
+}
+
+.btn-pacote.secundario {
+  background: #fff;
+  color: var(--cor-degrade-clara);
+  border: 2px solid var(--cor-degrade-clara);
+}
+
+/* EQUIPES */
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card-equipe {
+  text-align: center;
+  max-width: 200px;
+}
+
+.card-equipe img {
+  width: 100%;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  border: 4px solid var(--cor-degrade-clara);
+}
+
+.card-equipe h4 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: var(--cor-degrade-clara);
+}
+
+/* PACOTES */
+.cards-pacotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card-pacote {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.card-pacote:hover {
+  transform: translateY(-5px);
+}
+
+.card-pacote.destaque {
+  border: 2px solid var(--cor-degrade-clara);
+}
+
+.card-pacote h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--cor-degrade-clara);
+}
+
+.card-pacote ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-pacote li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* FORMULÁRIO */
+form.form-avaliacao {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* CONTATO */
+.contato-itens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contato-item a {
+  color: var(--cor-degrade-clara);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--cor-degrade-escura);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--cor-acento);
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+#btnTopo {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #FFD700;
+  background-color: var(--cor-degrade-clara);
+  color: white;
   border: none;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   border-radius: 50%;
-  font-size: 20px;
-  color: #000;
   cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 0 8px #000;
+  font-size: 1.5rem;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
-/* RESPONSIVIDADE */
+#btnTopo:hover {
+  background-color: var(--cor-degrade-escura);
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .pacotes {
+  .equipe {
     flex-direction: column;
     align-items: center;
   }
 
-  header {
+  .contato-itens {
     flex-direction: column;
-    gap: 10px;
   }
 
-  nav a {
-    margin: 5px 10px;
+  .footer-links {
+    flex-direction: column;
   }
 }
